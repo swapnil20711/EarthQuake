@@ -7,44 +7,81 @@
     <!--        android:layout_height="match_parent">-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="16dp">
 
         <TextView
             android:id="@+id/earthquakeMagnitude"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="6dp"
-            android:layout_weight="1"
-            android:text="6.0"></TextView>
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/magnitude_circle"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="8.9"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/earthquakeLocation_Offset"
-            android:layout_width="47dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="30 km S of"></TextView>
-        <TextView
-            android:id="@+id/earthquakePrimary_Location"
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:text="San Francisco, CA" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/earthquakeDate"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="26 Dec,2012"></TextView>
+            <TextView
+                android:id="@+id/earthquakeLocation_Offset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:text="30km S of"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorEarthquakeDetails"
+                android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/earthquakeTime"
-            android:layout_width="0dp"
+            <TextView
+                android:id="@+id/earthquakePrimary_Location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Long placeholder location that should wrap to more than 2 lines of text"
+                android:textColor="@color/textColorEarthquakeLocation"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="3:00 PM" />
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/earthquakeDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Mar 6, 2010"
+                android:textColor="@color/textColorEarthquakeDetails"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/earthquakeTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="3:00 PM"
+                android:textColor="@color/textColorEarthquakeDetails"
+                android:textSize="12sp" />
+        </LinearLayout>
 
     </LinearLayout>
     <!--    </ListView>-->
